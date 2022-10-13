@@ -1,0 +1,73 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav class="sidenav" >
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="dark">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        [routerLink]="['/menu']" routerLinkActive="router-link-active"
+       >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="heading_nav">
+        <h3 >GENTLEMAN CADETS</h3>
+      </div>
+
+    </mat-toolbar>
+     <!---     buttons-->
+     <div class="col-12">
+
+      <button type="button" class="btn btn-light btn-lg m-3" [routerLink]="['/gc']" routerLinkActive="router-link-active" >ADD NEW</button>
+      <button type="button" class="btn btn-light btn-lg m-3" [routerLink]="['/all']" routerLinkActive="router-link-active" >VIEW</button>
+      <button type="button" class="btn btn-light btn-lg m-3" [routerLink]="['/foreginer']" routerLinkActive="router-link-active" >FOREGINER</button>
+      <button type="button" class="btn btn-light btn-lg m-3">ADVANCED FILTER</button>
+    </div>
+
+    <!-- Add Content Here -->
+    <table class="table">
+      <thead class="thead-light">
+        <tr class="col-md-12">
+          <th scope="col">PREFIX</th>
+          <th scope="col">GC. NO</th>
+          <th scope="col">NAME</th>
+          <th scope="col">BATTALION</th>
+          <th scope="col">COMPANY</th>
+          <th scope="col">DOJ</th>
+          <th scope="col">COURSE</th>
+          <th scope="col">BANK ACC NO</th>
+          <th scope="col">COUNTRY</th>
+          <th scope="col">STATUS</th>
+          <th scope="col">REMARK</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let Gc of Gc">
+
+          <td class="text_td">{{Gc.gcType}}</td>
+          <td class="text_td">{{Gc.gcNumber}}</td>
+          <td class="text_td">{{Gc.name}}</td>
+          <td class="text_td">{{Gc.battalion}}</td>
+          <td class="text_td">{{Gc.company}}</td>
+          <td class="text_td">{{Gc.dateOfJoining}}</td>
+          <td class="text_td">{{Gc.course}}</td>
+          <td class="text_td">{{Gc.bankAccount}}</td>
+          <td class="text_td">{{Gc.country}}</td>
+          <td class="text_td">{{Gc.status}}</td>
+          <td class="text_td">{{Gc.remark}}</td>
+
+        </tr>
+
+      </tbody>
+    </table>
+
+
+
+      </mat-sidenav-content>
+</mat-sidenav-container>

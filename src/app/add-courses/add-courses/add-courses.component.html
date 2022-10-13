@@ -1,0 +1,73 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav class="sidenav" fixedInViewport
+      >
+    <mat-toolbar class="mat-toolbar"  >Menu</mat-toolbar>
+    <mat-nav-list>
+
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+
+        [routerLink]="['/menu']" routerLinkActive="router-link-active"
+       >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button><div class="heading_nav">
+        <h3 >Courses</h3>
+      </div>
+
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <div class="addcourse">
+      <button class="btn btn-lg btn-outline-primary" (click)="open(content)">ADD COURSE</button>
+
+      </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">ADD COURSE</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3">
+        <label for="courseName">COURSE NAME</label>
+        <div class="input-group" >
+          <input type="text" formControlName="coursename">
+
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="dateOfCourseCommencement">DATE OF COURSE COMMENCEMENT</label>
+        <div class="input-group">
+          <input type="date" formControlName="dateOfCourseCommencement">
+
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="dateOfCoursePassout">DATE OF COURSE PASSOUT</label>
+        <div class="input-group">
+          <input type="date" formControlName="dateOfCoursePassout">
+
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="onSubmit()">Add</button>
+  </div>
+</ng-template>
+
+<hr>
+
+<pre>{{ closeResult }}</pre>
+
+
+

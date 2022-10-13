@@ -1,0 +1,156 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav class="sidenav" >
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="dark">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        [routerLink]="['/menu']" routerLinkActive="router-link-active"
+       >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="heading_nav">
+        <h3 >GENTLEMAN CADETS</h3>
+      </div>
+
+    </mat-toolbar>
+    <!-- Add Content Here -->
+     <!---     buttons-->
+     <div class="col-12">
+
+      <button type="button" class="btn btn-light btn-lg m-3" [routerLink]="['/gc']" routerLinkActive="router-link-active" >ADD NEW</button>
+      <button type="button" class="btn btn-light btn-lg m-3" [routerLink]="['/all']" routerLinkActive="router-link-active" >VIEW</button>
+      <button type="button" class="btn btn-light btn-lg m-3" [routerLink]="['/foreginer']" routerLinkActive="router-link-active" >FOREGINER</button>
+      <button type="button" class="btn btn-light btn-lg m-3">ADVANCED FILTER</button>
+    </div>
+
+
+<div class="card-body">
+
+  <form [formGroup]="addGc" novalidate class="form">
+
+    <div class="form-group">
+      <div class="text-center">
+        GENTLEMAN CADETS INFORMATION
+      </div>
+
+
+              <div class="mb-2 row">
+
+              <label  class="col-sm-3 col-form-label" for="gcType">G.C NO.</label>
+              <div class="col-sm-6 ">
+              <select name="gcType" id="gcType" formControlName="gcType">
+                <option value="A/">A/</option>
+                <option value="D/">D/</option>
+                <option value="T/">T/</option>
+                <option value="TES/">TES/</option>
+                <option value="SCO/">SCO/</option>
+                <option value="U/">U/</option>
+                <option value="N/">N/</option>
+                <option value="SR/">SR/</option>
+              </select>
+
+              <div class="row-sm-12">
+                <input type="text" class="form-control" ngModle name="gc No." formControlName="gcNumber">
+              </div>
+            </div>
+
+            </div>
+            <div class=" mb-2 row" >
+
+
+              <label for="name" class="col-sm-3 col-form-label" >NAME</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" ngModle name="name" formControlName="name">
+              </div>
+
+
+
+            </div>
+            <div class=" mb-2 row">
+
+              <label for="battlion" class="col-sm-3 col-form-label" >BATTLION</label>
+              <div class="col-sm-6">
+              <input type="text" class="form-control" ngModle name="battlion" formControlName="battlion">
+              </div>
+
+            </div>
+            <div class="mb-2 row">
+
+              <label for="company" class="col-sm-3 col-form-label" >COMPANY</label>
+              <div class="col-sm-6">
+              <input type="text" class="form-control" ngModle name="company" formControlName="company">
+              </div>
+
+            </div>
+            <div class="mb-2 row">
+
+
+              <label for="dateOfJoining" class="col-sm-3 col-form-label" >DATE OF JOINING</label>
+              <div class="col-sm-6">
+              <input type="date" class="form-control" ngModle name="dateOfJoining" formControlName="dateOfJoining">
+              </div>
+
+            </div>
+            <div class="mb-2 row">
+
+              <label for="course" class="col-sm-3 col-form-label" >COURSE</label>
+              <div class="col-sm-6">
+              <input type="text" class="form-control"ngModle name="course" formControlName="course">
+
+              </div>
+            </div>
+            <div class="mb-2 row">
+
+              <label for="bankAccount" class="col-sm-3 col-form-label" >BANK ACCOUNT NO.</label>
+              <div class="col-sm-6">
+              <input type="text" class="form-control" ngModle name="bankaccount" formControlName="bankAccount">
+              </div>
+
+            </div>
+            <div class="mb-2 row">
+
+              <label for="country" class="col-sm-3 col-form-label" >COUNTRY</label>
+              <div class="col-sm-6">
+              <input type="text" class="form-control"ngModle name="country" formControlName="country">
+              </div>
+
+            </div>
+            <div class="mb-2 row">
+
+              <label for="status" class="col-sm-3 col-form-label" >STATUS</label>
+              <div class="col-sm-6">
+              <input type="text" class="form-control" ngModle name="status" formControlName="status">
+              </div>
+
+            </div>
+            <div class="mb-2 row">
+
+              <label for="remark" class="col-sm-3 col-form-label" >REMARK</label>
+              <div class="col-sm-6">
+              <input type="text" class="form-control"ngModle name="remark" required formControlName="remark">
+              </div>
+
+            </div>
+            <div class="text-lg-center">
+
+              <button  (click)="onSubmit()" type="submit" class="btn btn-primary m-md-2  btn-center btn-lg">SAVE</button>
+              <button type="reset" class="btn btn-primary m-md-2  btn-center btn-lg">CANCEL</button>
+
+            </div>
+</div>
+
+
+            </form>
+
+
+       </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
