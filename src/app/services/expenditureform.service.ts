@@ -14,13 +14,13 @@ export class ExpenditureformService {
 
 addExpenditureForm(expenditure:any){
 
-return this.http.post('ExpenditureForm',expenditure)
+return this.http.post('https://ima-backend.herokuapp.com/ExpenditureForm',expenditure)
 
 
   }
   listExpenditureForm(){
 
-    return this.http.get('ExpenditureForm')
+    return this.http.get('https://ima-backend.herokuapp.com/ExpenditureForm')
 
 
       }

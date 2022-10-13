@@ -15,13 +15,13 @@ export class BillingformService {
 
 addBillingForm(billing:any){
 
-return this.http.post('BillingForm',billing)
+return this.http.post('https://ima-backend.herokuapp.com/BillingForm',billing)
 
 
   }
   listBillingForm(){
 
-    return this.http.get('BillingForm')
+    return this.http.get('https://ima-backend.herokuapp.com/BillingForm')
 
 
       }

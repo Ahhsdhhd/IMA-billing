@@ -20,13 +20,13 @@ export class GcformService {
 
 addGc(gc:any){
 
-return this.http.post('GcForm',gc)
+return this.http.post('https://ima-backend.herokuapp.com/GcForm',gc)
 
 
   }
   listGc(){
 
-    return this.http.get('GcForm')
+    return this.http.get('https://ima-backend.herokuapp.com/GcForm')
 
 
       }

@@ -14,13 +14,13 @@ signup(data:any) :Observable<any>{
 
 
 
-  return this.http.post('auth/signup', data)
+  return this.http.post('https://ima-backend.herokuapp.com/auth/signup', data)
 
 }
 
 sigin(data:any):Observable<any>{
 
-  return  this.http.post('auth/login',
+  return  this.http.post('https://ima-backend.herokuapp.com/auth/login',
   data );
 }
 
